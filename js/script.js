@@ -14,11 +14,17 @@ $("#title").on("change", function() {
   }
 });
 
+
 $("#design").on("change", function(){
   if($("#design option:checked").val() === "js puns") {
-    $("#color").val("tomato").hide();
+    $("#color option").each(function() {
+      $("#color option:contains('Puns')").show();
+      $("#color option:contains('I')").hide();
+    })
   } else if ($("#design option:checked").val() === "heart js") {
-    console.log($("#color option").val());
+    $("#color option").each(function() {
+      $("#color option:contains('I')").show();
+      $("#color option:contains('Puns')").hide();
+    })
   }
-
 });
