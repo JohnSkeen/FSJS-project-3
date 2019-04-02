@@ -117,6 +117,31 @@ button:hover {
   display: none;
 }
 
+#totalCost {
+  color: black;
+}
+
+#notSelected {
+  color: white;
+  background-color: red;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#creditWarning {
+  color: white;
+  background-color: red;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#creditWarningDigits {
+  color: white;
+  background-color: red;
+  padding: 10px;
+  margin-top: 10px;
+}
+
 /* =================================
   Page Styles
 ==================================== */
