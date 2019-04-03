@@ -35,6 +35,7 @@ $(document).ready(function(){
   $("#bitCoin").hide();
   $("#payment option[value='select_method']").hide();
   $("#payment option[value='credit card']").attr("selected", true)
+  $(".other-title").hide();
 });
 
 
