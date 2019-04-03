@@ -64,34 +64,44 @@ $("#design").on("change", function(){
 
 // Ensure activities that occur at the same time can't be double selected and add cost
 // for 9am - 12pm activities
-$("label:contains('9am-12pm') input").on("change", function(){
+$("label:contains('Tuesday 9am-12pm') input").on("change", function(){
   if ($(this).is(':checked')) {
-    $("label:contains('9am-12pm') input").not(this).prop("disabled", true);
-    $("label:contains('9am-12pm') input").not(this).parent().css("color", "grey");
-    $("label:contains('9am-12pm') input").not(this).parent().css("text-decoration", "line-through");
+    $("label:contains('Tuesday 9am-12pm') input").not(this).prop("disabled", true);
+    $("label:contains('Tuesday 9am-12pm') input").not(this).parent().css("color", "grey");
+    $("label:contains('Tuesday 9am-12pm') input").not(this).parent().css("text-decoration", "line-through");
     totalCost += 100;
   } else {
-    $("label:contains('9am-12pm') input").not(this).prop("disabled", false);
-    $("label:contains('9am-12pm') input").not(this).parent().css("color", "black");
-    $("label:contains('9am-12pm') input").not(this).parent().css("text-decoration", "none");
+    $("label:contains('Tuesday 9am-12pm') input").not(this).prop("disabled", false);
+    $("label:contains('Tuesday 9am-12pm') input").not(this).parent().css("color", "black");
+    $("label:contains('Tuesday 9am-12pm') input").not(this).parent().css("text-decoration", "none");
     totalCost -= 100;
   }
 });
 
 // for 1pm - 4pm activities
-$("label:contains('1pm-4pm') input").on("change", function(){
+$("label:contains('Tuesday 1pm-4pm') input").on("change", function(){
   if ($(this).is(':checked')) {
-    $("label:contains('1pm-4pm') input").not(this).prop("disabled", true);
-    $("label:contains('1pm-4pm') input").not(this).parent().css("color", "grey");
-    $("label:contains('1pm-4pm') input").not(this).parent().css("text-decoration", "line-through");
+    $("label:contains('Tuesday 1pm-4pm') input").not(this).prop("disabled", true);
+    $("label:contains('Tuesday 1pm-4pm') input").not(this).parent().css("color", "grey");
+    $("label:contains('Tuesday 1pm-4pm') input").not(this).parent().css("text-decoration", "line-through");
     totalCost += 100;
   } else {
-    $("label:contains('1pm-4pm') input").not(this).prop("disabled", false);
-    $("label:contains('1pm-4pm') input").not(this).parent().css("color", "black");
-    $("label:contains('1pm-4pm') input").not(this).parent().css("text-decoration", "none");
+    $("label:contains('Tuesday 1pm-4pm') input").not(this).prop("disabled", false);
+    $("label:contains('Tuesday 1pm-4pm') input").not(this).parent().css("color", "black");
+    $("label:contains('Tuesday 1pm-4pm') input").not(this).parent().css("text-decoration", "none");
     totalCost -= 100;
   }
 });
+
+// Wednesday's costs added
+$("label:contains('Wednesday') input").on("change", function(){
+  if ($(this).is(':checked')) {
+    totalCost += 100;
+  } else {
+    totalCost -= 100;
+  }
+});
+
 
 // Create value for main conference event
 $("label:contains('Main') input").on("change", function(){
